@@ -10,7 +10,10 @@
 
 <!-- 
 2025-10-14 JK changed colors as following:
-#e37682 >> #0b64b3 || #5f4d93 >> #0b338f || #935d8c >> #0d4c9e
+				purple		blue		green
+Background		#935d8c >> #0d4c9e >> #dbf595
+Bottom 			#e37682 >> #0b64b3 >> #eefa7f
+Top 			#5f4d93 >> #0b338f >> #d4f5b0
 -->
 
 html, body, div, span, applet, object,
@@ -105,11 +108,11 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #0d4c9e;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #0b64b3 15%, #0b338f 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #0b64b3 15%, #0b338f 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #0b64b3 15%, #0b338f 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #0b64b3 15%, #0b338f 85%);
+		background-color: ;
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #eefa7f 15%, #d4f5b0 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #eefa7f 15%, #d4f5b0 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #eefa7f 15%, #d4f5b0 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #eefa7f 15%, #d4f5b0 85%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -126,7 +129,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background-color: #0d4c9e;
+		background-color: ;
 		color: rgba(255, 255, 255, 0.65);
 	}
 
@@ -2173,7 +2176,7 @@ input, select, textarea {
 
 		select option {
 			color: #ffffff;
-			background: #0d4c9e;
+			background: ;
 		}
 
 	input[type="checkbox"] + label,
@@ -2191,7 +2194,7 @@ input, select, textarea {
 	input[type="radio"]:checked + label:before {
 		background-color: #ffffff;
 		border-color: #ffffff;
-		color: #0d4c9e;
+		color: ;
 	}
 
 	input[type="checkbox"]:focus + label:before,
@@ -3789,3 +3792,4 @@ input, select, textarea {
 			}
 
 		}
+
