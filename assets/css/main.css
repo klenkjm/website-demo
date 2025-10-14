@@ -5,7 +5,13 @@
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
+
+<!-- 
+2025-10-14 JK changed colors as following:
+#e37682 >> #0b64b3 || #5f4d93 >> #0b338f || #935d8c >> #0d4c9e
+-->
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -99,11 +105,11 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-color: #0d4c9e;
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #0b64b3 15%, #0b338f 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #0b64b3 15%, #0b338f 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #0b64b3 15%, #0b338f 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #0b64b3 15%, #0b338f 85%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -120,7 +126,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background-color: #935d8c;
+		background-color: #0d4c9e;
 		color: rgba(255, 255, 255, 0.65);
 	}
 
@@ -2167,7 +2173,7 @@ input, select, textarea {
 
 		select option {
 			color: #ffffff;
-			background: #935d8c;
+			background: #0d4c9e;
 		}
 
 	input[type="checkbox"] + label,
@@ -2185,7 +2191,7 @@ input, select, textarea {
 	input[type="radio"]:checked + label:before {
 		background-color: #ffffff;
 		border-color: #ffffff;
-		color: #935d8c;
+		color: #0d4c9e;
 	}
 
 	input[type="checkbox"]:focus + label:before,
