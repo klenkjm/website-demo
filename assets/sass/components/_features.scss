@@ -16,14 +16,15 @@
 		list-style: none;
 
 		li {
-			width: calc(#{(100% / 3)} - #{_size(element-margin)});
+			width: calc(#{(100% / 4)} - #{_size(element-margin)}); /* JK changed from /3 to /4 */
 			margin-left: _size(element-margin);
 			margin-top: (_size(element-margin) * 1.5);
 			padding: 0;
 
 			&:nth-child(1),
 			&:nth-child(2),
-			&:nth-child(3) {
+			&:nth-child(3),
+			&:nth-child(4) { /* JK added child 4 */
 				margin-top: 0;
 			}
 
@@ -36,7 +37,7 @@
 			li {
 				width: calc(#{(100% / 2)} - #{_size(element-margin)});
 
-				&:nth-child(3) {
+				&:nth-child(4) { /* JK changed from 3 to 4 */
 					margin-top: (_size(element-margin) * 1.5);
 				}
 			}
@@ -52,9 +53,11 @@
 				margin-top: _size(element-margin);
 
 				&:nth-child(2),
-				&:nth-child(3) {
+				&:nth-child(3),
+				&:nth-child(4)  { /* JK added child 4 */
 					margin-top: _size(element-margin);
 				}
 			}
 		}
+
 	}
