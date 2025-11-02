@@ -2820,7 +2820,7 @@ input, select, textarea {
 			padding: 0;
 		}
 
-			.features li:nth-child(1), .features li:nth-child(2), .features li:nth-child(3) {
+			.features li:nth-child(1), .features li:nth-child(2), .features li:nth-child(3), .features li:nth-child(4)  { /* JK added child 4 */
 				margin-top: 0;
 			}
 
@@ -2834,7 +2834,7 @@ input, select, textarea {
 				width: calc(50% - 2em);
 			}
 
-				.features li:nth-child(3) {
+				.features li:nth-child(4) { /* JK changed from 3 to 4 */
 					margin-top: 3em;
 				}
 
@@ -2853,7 +2853,7 @@ input, select, textarea {
 					margin-top: 2em;
 				}
 
-					.features li:nth-child(2), .features li:nth-child(3) {
+					.features li:nth-child(2), .features li:nth-child(3), .features li:nth-child(4)  { /* JK added child 4 */
 						margin-top: 2em;
 					}
 
@@ -3783,5 +3783,6 @@ input, select, textarea {
 			}
 
 		}
+
 
 
