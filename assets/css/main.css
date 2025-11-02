@@ -2254,7 +2254,21 @@ input, select, textarea {
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
+/* JK folgender Abschnitt mittels ChatGPT eingefügt */
+.icon.major {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: #eee;
+  width: 4rem;
+  height: 4rem;
+}
 
+.icon.major .fa-solid {
+  font-size: 1.8rem; /* oder nach Geschmack anpassen */
+}
+/* JK ersetzt durch Abschnitt darüber
 		.icon.major {
 			border: solid 1px;
 			display: inline-block;
@@ -2263,7 +2277,7 @@ input, select, textarea {
 			margin: 0 0 2em 0;
 			cursor: default;
 		}
-
+*/
 			.icon.major:before {
 				display: inline-block;
 				font-size: 6.25rem;
@@ -3783,6 +3797,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
