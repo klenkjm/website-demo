@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+@import url("all.min.css"); /* JK changed from @import url(fontawesome-all.min.css); */
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
 /*
@@ -3783,6 +3783,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
