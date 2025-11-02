@@ -2216,163 +2216,130 @@ input, select, textarea {
 
 /* Icon */
 
-	.icon {
-		text-decoration: none;
-		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		border-bottom: none;
-		position: relative;
-	}
+/* ---------- Icon (überarbeitet für Font Awesome 7) ---------- */
 
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
-		}
+.icon {
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border-bottom: none;
+  position: relative;
+  display: inline-block; /* sicherer Default */
+}
 
-		.icon > .label {
-			display: none;
-		}
+/* Entferne den fehlerhaften Eintrag "line-height: solid;" und setze saubere Defaults.
+   Lass die Font-Awesome Datei die Icon-Content-Generierung übernehmen. */
+.icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1; /* <-- wichtig, vorher war "solid" */
+  text-transform: none !important;
+  /* Entferne harte Font-Angaben hier - die von Font Awesome gelieferte CSS regelt das. */
+  /* font-family / font-weight lieber nicht hier überschreiben, sonst Konflikte. */
+}
 
-		.icon:before {
-			line-height: solid;
-		}
+/* Falls du ein inneres Label hast */
+.icon > .label {
+  display: none;
+}
 
-		.icon.solid:before {
-			font-weight: 900;
-		}
+/* Alte spezifische Regeln (solid/brands) können bleiben — Font Awesome setzt die Inhalte. */
+.icon.solid:before { /* optional, falls du weiter pseudo-elemente nutzt */
+  /* font-weight: 900;  -- entfällt, wenn FA-CSS das setzt */
+}
 
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
-		}
-/* JK folgender Abschnitt mittels ChatGPT eingefügt */
+.icon.brands:before {
+  /* font-family: 'Font Awesome 5 Brands'; -- entfällt / wird von FA7 gesetzt */
+}
+
+/* ---------- Major Icon: zwei konzentrische Kreise + Icon zentriert ---------- */
+
 .icon.major {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  background: #eee;
-  width: 4rem;
-  height: 4rem;
+  /* Außenring */
+  display: inline-block;
+  position: relative;
+  width: 4.0rem;      /* Gesamtabmessung, anpassen nach Bedarf */
+  height: 4.0rem;
+  border-radius: 50%;
+  border: solid 1px rgba(255,255,255,0.35); /* Außenrand */
+  background: transparent; /* kein ausgefüllter Parent-Kreis mehr */
+  padding: 0; /* wir nutzen pseudo-elems, kein padding */
+  margin: 0 0 2em 0;
+  cursor: default;
+  text-align: center;
 }
 
-.icon.major .fa-solid {
-  font-size: 1.8rem; /* oder nach Geschmack anpassen */
+/* innerer gefüllter Kreis (Hintergrund hinter dem Icon) */
+.icon.major::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 0.8rem);   /* Abstand zum Außenrand */
+  height: calc(100% - 0.8rem);
+  border-radius: 50%;
+  background: #eee;             /* gefüllter innerer Kreis (wie vorher) */
+  border: solid 1px rgba(255,255,255,0.35); /* optional innerer Rand */
+  z-index: 0; /* hinter dem Icon platzieren */
 }
-/* JK ersetzt durch Abschnitt darüber
-		.icon.major {
-			border: solid 1px;
-			display: inline-block;
-			border-radius: 100%;
-			padding: 0.65em;
-			margin: 0 0 2em 0;
-			cursor: default;
-		}
-*/
-			.icon.major:before {
-				display: inline-block;
-				font-size: 6.25rem;
-				width: 2.25em;
-				height: 2.25em;
-				line-height: 2.2em;
-				border-radius: 100%;
-				border: solid 1px;
-				text-align: center;
-			}
 
-		.icon.alt {
-			display: inline-block;
-			border: solid 1px;
-			border-radius: 100%;
-		}
+/* Das Icon selbst (Font oder SVG) zentral darüber platzieren */
+.icon.major .fa-solid,
+.icon.major .fa-regular,
+.icon.major svg {
+  position: relative;
+  z-index: 1;        /* über dem inneren Kreis */
+  display: inline-block;
+  width: 1.2em;      /* skaliert Icon relativ zur Schriftgröße */
+  height: 1.2em;
+  vertical-align: middle;
+  font-size: 1.8rem; /* passt das Icon optisch an – ggf. feinjustieren */
+  line-height: 1;    /* damit es sauber in der Mitte sitzt */
+}
 
-			.icon.alt:before {
-				display: block;
-				font-size: 1.25em;
-				width: 2em;
-				height: 2em;
-				text-align: center;
-				line-height: 2em;
-			}
+/* Media queries: skaliere die Größen wie zuvor */
+@media screen and (max-width: 1680px) {
+  .icon.major { width: 3.5rem; height: 3.5rem; }
+  .icon.major .fa-solid,
+  .icon.major svg { font-size: 1.6rem; }
+  .icon.major::after { width: calc(100% - 0.7rem); height: calc(100% - 0.7rem); }
+}
 
-		.icon.style1 {
-			color: #efa8b0;
-		}
+@media screen and (max-width: 1280px) {
+  .icon.major { width: 3.0rem; height: 3.0rem; }
+  .icon.major .fa-solid,
+  .icon.major svg { font-size: 1.4rem; }
+  .icon.major::after { width: calc(100% - 0.6rem); height: calc(100% - 0.6rem); }
+}
 
-		.icon.style2 {
-			color: #c79cc8;
-		}
+@media screen and (max-width: 736px) {
+  .icon.major { margin: 0 0 1.5em 0; width: 2.5rem; height: 2.5rem; }
+  .icon.major .fa-solid,
+  .icon.major svg { font-size: 1.1rem; }
+  .icon.major::after { width: calc(100% - 0.5rem); height: calc(100% - 0.5rem); }
+}
 
-		.icon.style3 {
-			color: #a89cc8;
-		}
+/* style-Klassen weiterverwenden (Farben) */
+.icon.style1 { color: #efa8b0; }
+.icon.style2 { color: #c79cc8; }
+.icon.style3 { color: #a89cc8; }
+.icon.style4 { color: #9bb2e1; }
+.icon.style5 { color: #8cc9f0; }
 
-		.icon.style4 {
-			color: #9bb2e1;
-		}
+/* alt-Varianten weiter möglich */
+.icon.alt {
+  display: inline-block;
+  border: solid 1px rgba(255,255,255,0.35);
+  border-radius: 50%;
+}
+.icon.alt:before { display: block; font-size: 1.25em; width: 2em; height: 2em; text-align: center; line-height: 2em; }
+.icon.alt:hover { background-color: rgba(255,255,255,0.075); }
+.icon.alt:active { background-color: rgba(255,255,255,0.2); }
 
-		.icon.style5 {
-			color: #8cc9f0;
-		}
-
-		@media screen and (max-width: 1680px) {
-
-			.icon.major:before {
-				font-size: 5.5rem;
-			}
-
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			.icon.major:before {
-				font-size: 4.75rem;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.icon.major {
-				margin: 0 0 1.5em 0;
-				padding: 0.35em;
-			}
-
-				.icon.major:before {
-					font-size: 3.5rem;
-				}
-
-		}
-
-	.icon.major {
-		border-color: rgba(255, 255, 255, 0.35);
-	}
-
-		.icon.major:before {
-			border-color: rgba(255, 255, 255, 0.35);
-		}
-
-	.icon.alt {
-		border-color: rgba(255, 255, 255, 0.35);
-		color: #ffffff;
-	}
-
-		.icon.alt:hover {
-			background-color: rgba(255, 255, 255, 0.075);
-		}
-
-		.icon.alt:active {
-			background-color: rgba(255, 255, 255, 0.2);
-		}
 
 /* Image */
 
@@ -3797,6 +3764,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
