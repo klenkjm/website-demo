@@ -3038,6 +3038,12 @@ input, select, textarea {
 					margin-bottom: 2em;
 				}
 
+				/* JK added media screen for images */
+				.spotlight .images {
+			        margin-left: 0;       /* Entfernt die Verschiebung */
+			        align-items: center;  /* Optional: Bilder zentrieren */
+			    }
+
 		}
 
 		@media screen and (max-width: 736px) {
@@ -3770,6 +3776,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
