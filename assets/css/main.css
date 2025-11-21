@@ -3044,6 +3044,41 @@ input, select, textarea {
 			        align-items: center;  /* Optional: Bilder zentrieren */
 			    }
 
+/* ===== Anpassungen für kleine Bildschirme (innerhalb deiner bestehenden max-width: 980px Media Query) ===== */
+
+/* Macht den .images-Container voll breit und zentriert seine Kinder */
+.spotlight .images {
+    width: 100%;            /* Container nimmt volle Breite unter dem Text */
+    margin-left: 0;         /* sicherheitshalber entfernen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Bilder horizontal zentrieren */
+    gap: 1rem;
+    box-sizing: border-box;
+    padding-left: 0;
+}
+
+/* Macht jeden .image-Wrapper zu einem Block-Element, zentriert ihn und entfernt alten margin-left */
+.spotlight .images .image,
+.spotlight .image {
+    display: block;
+    margin-left: 0 !important;
+    margin-right: 0;
+    margin-bottom: 1.25rem;
+    padding: 0.35em;        /* falls du kleinere Padding willst */
+}
+
+/* Überschreibt die feste Breite (16em) und macht Bilder responsiv */
+.spotlight .images img,
+.spotlight .image img {
+    width: auto !important;     /* kein fester em-Wert mehr */
+    max-width: 85%;             /* responsiv: Bilder passen in die Bildschirmbreite */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 		}
 
 		@media screen and (max-width: 736px) {
@@ -3776,6 +3811,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
