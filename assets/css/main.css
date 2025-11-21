@@ -2981,6 +2981,22 @@ input, select, textarea {
 				width: 16em;
 			}
 
+
+		/* JK added container for images */
+		/* Der neue Image-Container rechts */
+		.spotlight .images {
+		    display: flex;
+		    flex-direction: column; /* Bilder untereinander */
+		    gap: 1.5rem; /* Abstand zwischen Bildern */
+		    margin-left: 2rem; /* Abstand zum Text */
+		}
+		
+		/* Optional: Bilder responsiv */
+		.spotlight .images img {
+		    max-width: 200px; /* oder nach Wunsch */
+		    height: auto;
+		}
+
 		@media screen and (max-width: 980px) {
 
 			.spotlight {
@@ -3753,6 +3769,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
