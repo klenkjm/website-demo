@@ -2983,18 +2983,19 @@ input, select, textarea {
 
 
 		/* JK added container for images */
-		/* Der neue Image-Container rechts */
+		/* Container für die Bilder rechts */
 		.spotlight .images {
-		    display: flex;
-		    flex-direction: column; /* Bilder untereinander */
-		    gap: 1.5rem; /* Abstand zwischen Bildern */
-		    margin-left: 2rem; /* Abstand zum Text */
+			display: flex;
+			flex-direction: column; /* Bilder untereinander */
+			justify-content: flex-start;
+			gap: 1.5rem; /* Abstand zwischen Bildern */
+			margin-left: 2rem; /* Abstand zum Text links */
 		}
 		
-		/* Optional: Bilder responsiv */
+		/* Optional: Bilder responsiv begrenzen */
 		.spotlight .images img {
-		    max-width: 200px; /* oder nach Wunsch */
-		    height: auto;
+			max-width: 220px; /* oder Wunschwert */
+			height: auto;
 		}
 
 		@media screen and (max-width: 980px) {
@@ -3769,6 +3770,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
