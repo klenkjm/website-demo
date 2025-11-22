@@ -3071,7 +3071,7 @@ input, select, textarea {
 /* Überschreibt die feste Breite (16em) und macht Bilder responsiv */
 .spotlight .images img,
 .spotlight .image img {
-    width: auto !important;     /* kein fester em-Wert mehr */
+    /*width: auto !important;     /* kein fester em-Wert mehr */
     max-width: 85%;             /* responsiv: Bilder passen in die Bildschirmbreite */
     height: auto;
     display: block;
@@ -3811,6 +3811,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
