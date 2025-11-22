@@ -3077,6 +3077,9 @@ input, select, textarea {
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+	width: auto;
+	max-width: 12em;    /* begrenzt das Bild */
 }
 
 		}
@@ -3815,6 +3818,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
