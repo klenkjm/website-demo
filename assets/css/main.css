@@ -3065,7 +3065,7 @@ input, select, textarea {
     margin-left: 0 !important;
     margin-right: 0;
     margin-bottom: 1.25rem;
-    padding: 0.35em;        /* falls du kleinere Padding willst */
+    padding: 0.65em;        /* 0,65 / 0,35 - falls du kleinere Padding willst */
 }
 
 /* Überschreibt die feste Breite (16em) und macht Bilder responsiv */
@@ -3087,7 +3087,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.spotlight .image {
-				padding: 0.35em;
+				padding: 0.65em;        /* 0,65 / 0,35 - falls du kleinere Padding willst */
 			}
 
 				.spotlight .image img {
@@ -3818,6 +3818,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
