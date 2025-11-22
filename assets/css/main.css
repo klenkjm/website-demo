@@ -3088,7 +3088,11 @@ input, select, textarea {
 			}
 
 				.spotlight .image img {
-					width: 12em;
+					/* JK changes according to chatGPT to fix frame issue */
+					/* width: 12em; */
+					width: auto;
+			        max-width: 12em;    /* begrenzt das Bild */
+			        height: auto;
 				}
 
 		}
@@ -3811,6 +3815,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
