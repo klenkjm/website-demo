@@ -2263,8 +2263,8 @@ input, select, textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 6rem;      /* increased from 4rem */
-  height: 6rem;     /* increased from 4rem */
+  width: 4rem;      /* increased from 4rem - JK reduced from 6 to 4 again */
+  height: 4rem;     /* increased from 4rem - JK reduced from 6 to 4 again */
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.35); /* outer circle */
   background: transparent;
@@ -3818,6 +3818,7 @@ input, select, textarea {
 			}
 
 		}
+
 
 
 
